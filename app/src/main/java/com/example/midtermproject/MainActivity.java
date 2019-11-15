@@ -10,7 +10,11 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+    ArrayList<Employee> employees;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.nav_bar);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
+        init();
+
+    }
+
+    private void init() {
+        employees = new ArrayList<>();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AddEmployeeFragment()).commit();
     }
 
     BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {

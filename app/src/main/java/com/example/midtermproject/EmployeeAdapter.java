@@ -37,17 +37,17 @@ public class EmployeeAdapter extends ArrayAdapter<Employee> {
         TextView name = listItem.findViewById(R.id.name);
         name.setText(currentEmployee.getName());
 
-        TextView age = listItem.findViewById(R.id.age);
-        age.setText(currentEmployee.getAge());
-
         TextView title = listItem.findViewById(R.id.title);
         title.setText(currentEmployee.getTitle());
 
+        TextView age = listItem.findViewById(R.id.age);
+        age.setText(currentEmployee.getAge()+"");
+
         TextView yearOfExp = listItem.findViewById(R.id.year_of_experience);
-        yearOfExp.setText(currentEmployee.getYearOfExperience());
+        yearOfExp.setText(currentEmployee.getYearOfExperience()+"");
 
         TextView salary = listItem.findViewById(R.id.salary);
-        salary.setText(currentEmployee.getSalary());
+        salary.setText(currentEmployee.getSalary()+"");
 
 
         return listItem;
