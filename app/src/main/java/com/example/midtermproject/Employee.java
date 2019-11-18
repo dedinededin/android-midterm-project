@@ -3,6 +3,7 @@ package com.example.midtermproject;
 public class Employee {
     String name, title;
     int age, salary, yearOfExperience;
+    boolean isPromoted = false;
 
     public Employee() {
     }
@@ -45,5 +46,13 @@ public class Employee {
 
     public void setYearOfExperience(int yearOfExperience) {
         this.yearOfExperience = yearOfExperience;
+    }
+
+    public boolean isPromoted() {
+        return isPromoted;
+    }
+
+    public void setPromoted(boolean promoted) {
+        isPromoted = promoted;
     }
 }
